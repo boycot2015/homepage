@@ -174,7 +174,7 @@ export default {
     },
     // Waline 评论
     Waline: {
-      enable: true,
+      enable: false,
       serverURL: 'https://waline.boycot.top'
     }
   },
