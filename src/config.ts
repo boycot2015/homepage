@@ -1,5 +1,5 @@
 const customConfig = {
-  imgApi: 'https://bing.img.run/rand.php',
+  imgApi: 'https://img.boycot.workers.dev', // https://bing.img.run/rand.php
   // 博客音乐组件解析接口 metting-js https://api.i-meto.com/meting/api
   musicApi: 'https://api.i-meto.com/meting/api',
   // 地图接口
