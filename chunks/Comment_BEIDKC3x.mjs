@@ -1,4 +1,4 @@
-import { c as createComponent, m as maybeRenderHead, a as renderTemplate } from './astro_B7m96e1z.mjs';
+import { c as createComponent, m as maybeRenderHead, a as renderTemplate } from './astro_Cs5b5Iv6.mjs';
 import './vendor_6cuRSzg4.mjs';
 /* empty css                      */
 

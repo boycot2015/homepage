@@ -1,7 +1,7 @@
-import { c as createComponent, b as createAstro, r as renderComponent, a as renderTemplate, g as renderScript, m as maybeRenderHead, d as addAttribute, h as renderTransition } from '../../chunks/astro_B7m96e1z.mjs';
+import { c as createComponent, b as createAstro, r as renderComponent, a as renderTemplate, g as renderScript, m as maybeRenderHead, d as addAttribute, h as renderTransition } from '../../chunks/astro_Cs5b5Iv6.mjs';
 import '../../chunks/vendor_6cuRSzg4.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_B_2baZ3I.mjs';
-import { g as getAllbooks } from '../../chunks/ebook_DyfeoGLH.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_5jcBB16y.mjs';
+import { g as getAllbooks } from '../../chunks/ebook_qIfkMI13.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();

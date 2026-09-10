@@ -1,4 +1,4 @@
-import { g as getCollection } from './_astro_content_B8BtAnm3.mjs';
+import { g as getCollection } from './_astro_content_DhLq0NIO.mjs';
 import { a as get } from './scripts_CWVoRoSx.mjs';
 
 async function getAllbooks() {

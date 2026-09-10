@@ -1,6 +1,6 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_B7m96e1z.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_Cs5b5Iv6.mjs';
 import '../chunks/vendor_6cuRSzg4.mjs';
-import { $ as $$ToolLayout } from '../chunks/ToolLayout_0rsHwAfW.mjs';
+import { $ as $$ToolLayout } from '../chunks/ToolLayout_CsuYYQko.mjs';
 export { renderers } from '../renderers.mjs';
 
 const html = () => "<div class=\"w-full bg-[#fff] shadow-[var(--byt-box-shadow)] rounded-[var(--byt-main-radius)]\">\n    <div style=\"margin: 0 auto;text-align: center;\">\n        <img src=\"/assets/images/chat_bg.webp\" style=\"display: inline-block;\" height=\"100%\" alt=\"\">\n    </div>\n</div>\n<section><p>期待你的畅所欲言～</p></section>";

@@ -1,6 +1,6 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_B7m96e1z.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_Cs5b5Iv6.mjs';
 import '../chunks/vendor_6cuRSzg4.mjs';
-import { $ as $$PageLayout } from '../chunks/PageLayout_bLRsw50L.mjs';
+import { $ as $$PageLayout } from '../chunks/PageLayout_BjHh9TIf.mjs';
 export { renderers } from '../renderers.mjs';
 
 const html = () => "<section><p>你来到了一个不存在的页面。</p></section>";

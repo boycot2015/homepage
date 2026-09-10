@@ -1,6 +1,6 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_B7m96e1z.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, u as unescapeHTML } from '../chunks/astro_Cs5b5Iv6.mjs';
 import '../chunks/vendor_6cuRSzg4.mjs';
-import { $ as $$ToolLayout } from '../chunks/ToolLayout_0rsHwAfW.mjs';
+import { $ as $$ToolLayout } from '../chunks/ToolLayout_CsuYYQko.mjs';
 export { renderers } from '../renderers.mjs';
 
 const html = () => "<section><p>如果你是我的邻居，但是没有在这里看到自己，可以立刻马上告诉我你的 RSS 订阅地址噢～</p></section>";
