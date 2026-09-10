@@ -1,3 +1,4 @@
+import { imgApi } from './api';
 export default {
   // 网站标题
   Title: 'boycot',
@@ -19,7 +20,6 @@ export default {
   Cover: '/assets/images/banner/072c12ec85d2d3b5.webp',
   // 网站侧边栏公告 (不填写即不开启)
   Tips: '<p>欢迎光临我的博客 🎉</p><p>这里会分享我的日常和学习中的收集、整理及总结，希望能对你有所帮助:) 💖</p>',
-  HitokotoApi: 'https://v1.hitokoto.cn',
   // 首页打字机文案列表
   TypeWriteList: [
     '世上无难事，只怕有心人',
@@ -49,17 +49,17 @@ export default {
     // 首页轮播图配置 (swiper 类型时生效), 可以在文章加上recommend: true 来开启
     list:[{
       title: '世上无难事，只怕有心人',
-      img: 'https://bing.img.run/rand.php?t=1696428800',
+      img: `${imgApi}?t=1696428800`,
     },{
       title: '越努力越幸运',
-      img: 'https://bing.img.run/rand.php?t=1696428801',
+      img: `${imgApi}?t=1696428801`,
     }],
     // 首页高度
     HomeHeight: '38.88rem',
     // 其他页面高度
     PageHeight: '28.88rem',
     // 背景
-    background: "url('https://bing.img.run/rand.php') no-repeat center 60%/cover,url('https://bing.img.run/rand.php?t=1696428800') no-repeat center 60%/cover,url('https://bing.img.run/rand.php?t=1696428801') no-repeat center 60%/cover", // swiper 类型时生效，多张图片时逗号隔开，例如：'url1, url2, url3'
+    background: `url(${imgApi}) no-repeat center 60%/cover,url(${imgApi}?t=1696428800) no-repeat center 60%/cover,url(${imgApi}?t=1696428801) no-repeat center 60%/cover`, // swiper 类型时生效，多张图片时逗号隔开，例如：'url1, url2, url3'
     // background: "url('/assets/images/home-banner.webp') no-repeat center 60%/cover",
   },
   // 博客主题配置
