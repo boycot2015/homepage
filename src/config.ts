@@ -1,4 +1,5 @@
 import { imgApi, HitokotoApi, musicApi } from './api';
+import githubConfig from './github.config.ts';
 const customConfig = {
   imgApi,
   HitokotoApi,
@@ -13,12 +14,13 @@ const customConfig = {
   '60sApi': 'https://60s-api.viki.moe/v2', // https://api-v2.boycot.top/v2
   Api: 'https://api.boycot.top/api',// https://api-v2.boycot.top/v2
 }
-const env = process.env.NODE_ENV;
-if (env === 'github') {
-  const githubConfig = await import('./github.config.ts');
-  Object.assign(customConfig, githubConfig.default)
+const MODE = process.env.MODE;
+if (MODE === 'github') {
+  // const githubConfig = await import('./github.config.ts');
+  // Object.assign(customConfig, githubConfig.default)
+  Object.assign(customConfig, githubConfig)
 }
-// console.log(customConfig, env, 'customConfig');
+console.log(MODE, 'currentMode');
 export default {
   // 网站标题
   Title: 'boycot',
@@ -181,9 +183,9 @@ export default {
   },
   // Analytics 统计
   Analytics: {
-    enable: false,
-    server: 'https://boycot.top',
-    siteId: 'boycot'
+    enable: true,
+    server: 'https://byt-analytics.pages.dev', // https://byt-analytics.pages.dev/analytics.min.js
+    siteId: 'blog'
   },
   // Google 广告
   GoogleAds: {

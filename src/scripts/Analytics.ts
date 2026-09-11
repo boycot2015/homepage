@@ -5,5 +5,5 @@ import { LoadScript } from "@/utils/index";
 
 export default async () => {
   const { Analytics } = SITE_INFO;
-  Analytics.enable && LoadScript(`${Analytics.server}/tracker.min.js`, [{ k: "data-website-id", v: Analytics.siteId }]);
+  Analytics.enable && LoadScript(`${Analytics.server}/analytics.min.js`, [{ k: "data-website-id", v: Analytics.siteId }]);
 }

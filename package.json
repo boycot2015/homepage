@@ -4,16 +4,16 @@
   "version": "1.0.4",
   "scripts": {
     "dev": "astro dev",
-    "dev:github": "NODE_ENV=github astro dev",
+    "dev:github": "MODE=github astro dev",
     "build": "astro build",
-    "build:github": "NODE_ENV=github astro build",
+    "build:github": "MODE=github astro build",
     "preview": "astro build && astro preview",
-    "preview:github": "NODE_ENV=github astro build && astro preview",
+    "preview:github": "MODE=github astro build && astro preview",
     "astro": "astro",
     "newpost": "node ./script/newpost.js",
     "offdev": "astro preferences disable devToolbar",
     "ondev": "astro preferences enable devToolbar",
-    "deploy": "NODE_ENV=github astro build && gh-pages -d dist --repo git@github.com:boycot2015/boycot2015.github.io.git"
+    "deploy": "MODE=github astro build && gh-pages -d dist --repo git@github.com:boycot2015/boycot2015.github.io.git"
   },
   "homepage": "https://boycot2015.github.io",
   "dependencies": {

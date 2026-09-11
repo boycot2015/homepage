@@ -160,9 +160,9 @@ export default {
   },
   // Analytics 统计
   Analytics: {
-    enable: false,
-    server: 'https://boycot.top',
-    siteId: 'boycot'
+    enable: true,
+    server: 'https://byt-analytics.pages.dev', // https://byt-analytics.pages.dev/analytics.min.js
+    siteId: 'blog'
   },
   // Google 广告
   GoogleAds: {
