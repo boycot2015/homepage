@@ -70,7 +70,10 @@ const commentInit = async (key: string, walineInit: any) => {
   if (!document.querySelector(commentDOM)) return;
   // 评论列表
   const CommentList: any = { TwikooFn, WalineFn };
-  // 初始化评论
+  if (SITE_INFO.Comment[key as keyof typeof SITE_INFO.Comment].readonly) {
+    document.querySelector('.byt-comment')!.classList.add('readonly');
+  };
+   // 初始化评论
   CommentList[`${key}Fn`](commentDOM, walineInit);
 }
 

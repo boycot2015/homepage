@@ -1,5 +1,8 @@
 import { imgApi, HitokotoApi, musicApi } from './api';
 import githubConfig from './github.config.ts';
+const MODE = import.meta.env.SSR ? process.env.MODE : import.meta.env.MODE;
+
+console.log('currentMode:', MODE, import.meta.env);
 const customConfig = {
   imgApi,
   HitokotoApi,
@@ -13,14 +16,37 @@ const customConfig = {
   ApiDocs: 'https://doc-api.boycot.top',
   '60sApi': 'https://60s-api.viki.moe/v2', // https://api-v2.boycot.top/v2
   Api: 'https://api.boycot.top/api',// https://api-v2.boycot.top/v2
+  // 博客音乐组件是否开启
+  musicBoxShow: MODE !== 'github',
+  // 评论组件（只允许同时开启一个）
+  Comment: {
+    // Twikoo 评论
+    Twikoo: {
+      enable: false,
+      readonly: MODE !== 'github', // 是否只读, 只展示不能评论
+      // AhBbW9j4bNIOrrWR
+      // 替换为你自己的环境 ID
+      envId: 'https://comment.boycot.top'
+    },
+    // Waline 评论
+    Waline: {
+      enable: true,
+      readonly: MODE !== 'github', // 是否只读, 只展示不能评论
+      serverURL: 'https://waline.boycot.top'
+    }
+  },
+  // Analytics 统计
+  Analytics: {
+    enable: true,
+    server: 'https://byt-analytics.pages.dev', // https://byt-analytics.pages.dev/analytics.min.js
+    siteId: 'blog'
+  },
 }
-const MODE = process.env.MODE;
 if (MODE === 'github') {
   // const githubConfig = await import('./github.config.ts');
   // Object.assign(customConfig, githubConfig.default)
   Object.assign(customConfig, githubConfig)
 }
-console.log(MODE, 'currentMode');
 export default {
   // 网站标题
   Title: 'boycot',
@@ -164,29 +190,6 @@ export default {
     'https://cn.cravatar.com',
     'https://registry.npmmirror.com'
   ],
-  // 博客音乐组件是否开启
-  musicBoxShow: !import.meta.env.PROD,
-  // 评论组件（只允许同时开启一个）
-  Comment: {
-    // Twikoo 评论
-    Twikoo: {
-      enable: false,
-      // AhBbW9j4bNIOrrWR
-      // 替换为你自己的环境 ID
-      envId: 'https://comment.boycot.top'
-    },
-    // Waline 评论
-    Waline: {
-      enable: false,
-      serverURL: 'https://waline.boycot.top'
-    }
-  },
-  // Analytics 统计
-  Analytics: {
-    enable: true,
-    server: 'https://byt-analytics.pages.dev', // https://byt-analytics.pages.dev/analytics.min.js
-    siteId: 'blog'
-  },
   // Google 广告
   GoogleAds: {
     ad_Client: '', //ca-pub-xxxxxx

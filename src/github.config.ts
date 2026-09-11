@@ -141,29 +141,6 @@ export default {
     'https://cn.cravatar.com',
     'https://registry.npmmirror.com'
   ],
-  // 博客音乐组件是否开启
-  musicBoxShow: false,
-  // 评论组件（只允许同时开启一个）
-  Comment: {
-    // Twikoo 评论
-    Twikoo: {
-      enable: false,
-      // AhBbW9j4bNIOrrWR
-      // 替换为你自己的环境 ID
-      envId: 'https://comment.boycot.top'
-    },
-    // Waline 评论
-    Waline: {
-      enable: true,
-      serverURL: 'https://waline.boycot.top'
-    }
-  },
-  // Analytics 统计
-  Analytics: {
-    enable: true,
-    server: 'https://byt-analytics.pages.dev', // https://byt-analytics.pages.dev/analytics.min.js
-    siteId: 'blog'
-  },
   // Google 广告
   GoogleAds: {
     ad_Client: '', //ca-pub-xxxxxx

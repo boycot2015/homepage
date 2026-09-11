@@ -7,6 +7,16 @@
   background-color: var(--byt-white-color);
   box-shadow: var(--byt-box-shadow);
   overflow: hidden;
+  &.readonly {
+    .wl-editor,
+    .wl-header,
+    .wl-actions,
+    .wl-comment,
+    .tk-submit,
+    .wl-footer {
+      display: none !important;
+    }
+  }
 
   // 评论样式
   .twikoo {
