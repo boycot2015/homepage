@@ -1,7 +1,7 @@
 import { imgApi, HitokotoApi, musicApi } from './api';
 import githubConfig from './github.config.ts';
 const MODE = import.meta.env.SSR ? process.env.MODE : import.meta.env.MODE;
-
+const isGithub = MODE === 'github';
 console.log('currentMode:', MODE, import.meta.env);
 const customConfig = {
   imgApi,
@@ -17,21 +17,21 @@ const customConfig = {
   '60sApi': 'https://60s-api.viki.moe/v2', // https://api-v2.boycot.top/v2
   Api: 'https://api.boycot.top/api',// https://api-v2.boycot.top/v2
   // 博客音乐组件是否开启
-  musicBoxShow: MODE !== 'github',
+  musicBoxShow: isGithub,
   // 评论组件（只允许同时开启一个）
   Comment: {
     // Twikoo 评论
     Twikoo: {
-      enable: false,
-      readonly: MODE !== 'github', // 是否只读, 只展示不能评论
+      enable: isGithub,
+      readonly: !isGithub, // 是否只读, 只展示不能评论
       // AhBbW9j4bNIOrrWR
       // 替换为你自己的环境 ID
       envId: 'https://comment.boycot.top'
     },
     // Waline 评论
     Waline: {
-      enable: true,
-      readonly: MODE !== 'github', // 是否只读, 只展示不能评论
+      enable: !isGithub,
+      readonly: !isGithub, // 是否只读, 只展示不能评论
       serverURL: 'https://waline.boycot.top'
     }
   },
@@ -42,7 +42,7 @@ const customConfig = {
     siteId: 'blog'
   },
 }
-if (MODE === 'github') {
+if (isGithub) {
   // const githubConfig = await import('./github.config.ts');
   // Object.assign(customConfig, githubConfig.default)
   Object.assign(customConfig, githubConfig)
